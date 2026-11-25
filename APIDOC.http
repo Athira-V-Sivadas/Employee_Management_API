@@ -1,0 +1,69 @@
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username" : "Angitha",
+    "password" : "angitha@gmail.com"
+}
+
+
+###
+POST http://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+    "username" : "Angitha",
+    "password" : "angitha@gmail.com"
+}
+
+###
+GET http://127.0.0.1:8000/employees/
+Accept: application/json
+Authorization: Token c1d52a059db3af6940dc1b1c3c609ecc7916609e
+
+
+###
+POST http://127.0.0.1:8000/employees/
+Content-Type: application/json
+Authorization: Token c1d52a059db3af6940dc1b1c3c609ecc7916609e
+
+{
+    "name" : "Athira",
+    "department" : "IT",
+    "employee_id" : 101,
+    "designation" : "Developer",
+    "salary" : 50000
+} 
+
+
+###
+POST http://127.0.0.1:8000/employees/
+Content-Type: application/json
+Authorization: Token c1d52a059db3af6940dc1b1c3c609ecc7916609e
+
+{
+    "name" : "Sona",
+    "department" : "AI",
+    "employee_id" : 102,
+    "designation" : "Developer",
+    "salary" : 50000
+} 
+
+###
+PUT http://127.0.0.1:8000/employees/2/
+Content-Type: application/json
+Authorization: Token c1d52a059db3af6940dc1b1c3c609ecc7916609e
+
+{
+    "name" : "Sona",
+    "department" : "AI",
+    "employee_id" : 102,
+    "designation" : "AI Engineer",
+    "salary" : 50000
+} 
+
+###
+DELETE http://127.0.0.1:8000/employees/1/
+Content-Type: application/json
+Authorization: Token c1d52a059db3af6940dc1b1c3c609ecc7916609e
